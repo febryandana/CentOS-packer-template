@@ -10,7 +10,7 @@ Template packer untuk OS CentOS 8, hasilnya berupa file virtualbox (ovf dan vmdk
 
 ## Langkah Kerja
   - Install virtualbox di host machines
-  - Download & Install Packer ke sistem
+  - Download & Install Packer ke host machines
   - Jalankan Packer dengan template yang sudah dibuat
 
 ## Penggunaan Packer
