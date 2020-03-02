@@ -13,7 +13,7 @@ Template packer untuk OS CentOS 8, hasilnya berupa file virtualbox (ovf dan vmdk
   - Download & Install Packer ke sistem
   - Jalankan Packer dengan template yang sudah dibuat
 
-### Penggunaan Packer
+## Penggunaan Packer
   1. Download paket packer dari website
   2. Extract paket packer, hasilnya adalah satu file bernama "packer"
   3. Pindah/salin file packer ke /usr/lib/bin
@@ -29,5 +29,5 @@ Template packer untuk OS CentOS 8, hasilnya berupa file virtualbox (ovf dan vmdk
   
   
   
-  ## Author
+  ### Author
   Moch. Febryandana Nurfahri (febryandana.fd@gmail.com)
