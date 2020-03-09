@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 # Disable local time
 timedatectl set-local-rtc 0
 

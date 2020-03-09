@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Install LAMP Stack + expect
-yum -y install httpd mariadb-server mariadb php php-common php-mysqlnd expect
+yum -y install httpd mariadb mariadb-server php php-common php-mysqlnd expect
 systemctl start httpd.service
 systemctl enable httpd.service
 systemctl start mariadb
@@ -44,9 +44,10 @@ expect eof
 ")
 echo "${SECURE_MYSQL}"
 
+yum -y update tzdata
 systemctl restart mariadb
 
 # Install console based browser
-yum -y --enablerepo=PowerTools install elinks links lynx
+yum -y --enablerepo=PowerTools install links
 
 exit 0
