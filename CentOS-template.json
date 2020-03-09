@@ -1,0 +1,54 @@
+{
+    "builders": [
+    {
+        "iso_url": "/home/m1nerva/poros/CentOS-8.1.1911-x86_64-dvd1/CentOS-8.1.1911-x86_64-dvd1.iso",
+        "iso_checksum": "3ee3f4ea1538e026fff763e2b284a6f20b259d91d1ad5688f5783a67d279423b",
+        "iso_checksum_type": "sha256",
+        "disk_size": 20000,
+        "boot_wait": "5s",
+        "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+        "guest_os_type": "RedHat_64",
+        "headless": "true",
+        "http_directory": "http",
+        "boot_command": [
+            "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+        ],
+        "shutdown_command": "/sbin/halt -p",
+        "ssh_username": "root",
+        "ssh_password": "hubla",
+        "ssh_port": 22,
+        "ssh_timeout": "10000s",
+        "type": "virtualbox-iso",
+        "vboxmanage": [
+            [
+                "modifyvm",
+                "{{.Name}}",
+                "--memory",
+                "2048"
+            ],
+            [
+                "modifyvm",
+                "{{.Name}}",
+                "--cpus",
+                "2"
+            ],
+            [
+                "modifyvm",
+                "{{.Name}}",
+                "--nic1",
+                "nat"
+            ]
+            ],
+        "vm_name": "CentOS_Packer"
+    }
+    ],
+    "provisioners": [
+    {
+        "type": "shell",
+            "scripts": [
+              "scripts/base.sh",
+              "scripts/lamp.sh"
+            ]
+    }
+    ]
+}
