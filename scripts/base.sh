@@ -4,7 +4,6 @@
 timedatectl set-local-rtc 0
 
 # Install EPEL (Extra Package for Enterprise Linux)
-#dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 yum -y install epel-release
 yum -y install 'dnf-command(config-manager)'
 yum config-manager --set-enabled PowerTools
@@ -13,7 +12,7 @@ yum config-manager --set-enabled PowerTools
 yum -y update
 yum -y upgrade
 
-# Install service
+# Install firewall & dkms services
 yum -y install dkms firewalld
 
 # Start firewall

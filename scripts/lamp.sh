@@ -18,7 +18,7 @@ echo "<?php phpinfo(); ?>" >> /var/www/html/info.php
 
 # Automated mysql_secure_installation
 # MySQL password Parameter
-NEW_MYSQL_PASSWORD="hubla"
+NEW_MYSQL_PASSWORD="1234"
 
 # Running Expect
 SECURE_MYSQL=$(expect -c "
@@ -47,6 +47,7 @@ echo "${SECURE_MYSQL}"
 yum -y update tzdata
 systemctl restart mariadb
 
+# Optional
 # Install console based browser
 yum -y --enablerepo=PowerTools install links
 
