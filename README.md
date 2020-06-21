@@ -1,7 +1,7 @@
-# Packer Template for CentOS 8 (Plus Web Server httpd, mariaDB, php)
+# Packer Template for CentOS 8
+(Plus Web Server httpd, mariaDB, php)
 
-This template is for virtualbox use, outputs will be ovf and vmdk file
-
+This template is for virtualbox use, output will be ovf file and vmdk file. You could use this template to create a virtual centOS based web server by import the ovf file to virtualbox.
 
 ### Requirements
   * [Packer](www.packer.io)
