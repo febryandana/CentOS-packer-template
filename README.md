@@ -27,11 +27,11 @@ This template is for virtualbox use, outputs will be ovf and vmdk file
       $ source ~/.bashrc
       ```
   5. Run Packer
-      5.1. Validate file template packer :
+      - Validate file template packer :
            ```
            $ packer validate template.json
            ```
-      5.2. Build Packer Virtualbox Image :
+      - Build Packer Virtualbox Image :
            ```
            $ packer build template.json
            ```
