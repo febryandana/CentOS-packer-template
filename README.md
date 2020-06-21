@@ -35,7 +35,37 @@ This template is for virtualbox use, output will be ovf file and vmdk file. You 
            ```
            $ packer build template.json
            ```
+
+### Notes
+
+In CentOS-template.json, don't forget to change this line :
+  ```
+  "iso_url": "/PATH/TO/YOUR/ISO FILE",
+
+  "iso_checksum": "OUTPUT FROM ISO CHECKSUM",
+
+  "ssh_password": "1234",
+  ```
+
+In ks.cfg file, change this line to your choice
+  ```
+  rootpw --plaintext 1234
+
+  timezone Asia/Jakarta --isUtc
   
+  useradd febryan
+  
+  echo "febryan" | passwd febryanpass --stdin
+  
+  gpasswd -a febryan wheel
+
+  echo "febryan        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers.d/febryan
+  ```
+
+In lamp.sh, change this line to your choice
+  ```
+  NEW_MYSQL_PASSWORD="1234"
+  ```
   
 
 ##### Author
